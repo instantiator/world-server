@@ -4,12 +4,12 @@ Tools and scripts to host your own postgis database and tile server using [OpenS
 
 ## Scripts
 
-| script              | purpose                                                                                                                       |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `update-data.sh`    | Retrieves fresh data from [Geofabrik](http://download.geofabrik.de/europe/great-britain.html)                                 |
-| `run-server.sh`     | Launches a [PostGIS](https://postgis.net/) database and [pg_tileserv](https://github.com/CrunchyData/pg_tileserv) tile server |
-| `import-data.sh`    | Imports data into the database, using [osm2pgsql](https://osm2pgsql.org/)                                                     |
-| `test-open-tile.sh` | Opens a browser view with a single tile showing the topmost world view                                                        |
+| script               | purpose                                                                                                                       |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `update-data.sh`     | Retrieves fresh data from [Geofabrik](http://download.geofabrik.de/europe/great-britain.html)                                 |
+| `run-server.sh`      | Launches a [PostGIS](https://postgis.net/) database and [pg_tileserv](https://github.com/CrunchyData/pg_tileserv) tile server |
+| `import-data.sh`     | Imports data into the database, using [osm2pgsql](https://osm2pgsql.org/)                                                     |
+| `open-tileserver.sh` | Opens a browser to the tileserver (on localhost)                                                                              |
 
 _NB. `update-data.sh` is currently untested._
 
@@ -18,7 +18,7 @@ _NB. `update-data.sh` is currently untested._
 - Run `update-data.sh` to fetch a fresh copy of `data/great-britain-latest.osm.pbf`
 - Run `run-server.sh` to start the database and tile server
 - Run `time import-data.sh` to import all data into the database (NB. this can take a while...)
-- Run `test-open-tile.sh` to view the topmost tile and assure yourself the data has imported
+- Run `open-tileserver.sh` to visit the tileserver
 
 ### Import times
 
@@ -26,7 +26,7 @@ Please submit additional data to help establish some import expectations...
 
 | file                           | system               | import time |
 | ------------------------------ | -------------------- | ----------- |
-| `great-britain-latest.osm.pbf` | Macbook Pro M1, 2020 | TBC         |
+| `great-britain-latest.osm.pbf` | Macbook Pro M1, 2020 | `1:00:51`   |
 
 ## Security
 
