@@ -1,0 +1,8 @@
+# Visual Studio Code
+.vscode
+
+# Mac
+.DS_Store
+
+# data files are LARGE - do not track
+data/*

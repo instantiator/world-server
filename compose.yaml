@@ -1,0 +1,33 @@
+version: "3.8"
+services:
+
+  tile-server:
+    image: 'pramsey/pg_tileserv:latest'
+    env_file:
+      - config/world-server.env
+    depends_on:
+      world-server-db:
+        condition: service_healthy
+    ports:
+      - "${TILE_PORT}:${TILE_PORT}"
+
+  world-server-db:
+    image: 'postgis/postgis:latest'
+    expose:
+      - "${DB_PORT}"
+    ports:
+      - "${DB_PORT}:${DB_PORT}"
+    command: "-p ${DB_PORT}"
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U","${POSTGRES_USER}", "-d","${POSTGRES_DB}","-p","${DB_PORT}" ]
+      interval: 5s
+      timeout: 10s
+      retries: 12
+    restart: unless-stopped
+    env_file:
+      -  config/world-server.env
+    volumes:
+      - db-data-world-server:/var/lib/postgresql/data/
+
+volumes:
+  db-data-world-server:
