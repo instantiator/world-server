@@ -2,6 +2,8 @@
 
 Tools and scripts to host your own postgis database and tile server using [OpenStreetMap](https://www.openstreetmap.org/) data.
 
+![A screenshot of a browser, showing a map of the UK with blue highlights indicating all the known campsites](screenshots/public.campsites_all.png "A screenshot of a browser, showing a map of the UK with blue highlights indicating all the known campsites")
+
 ## Notes
 
 * The scripts included here assume presence of `bash` and `brew` on Mac OS.
