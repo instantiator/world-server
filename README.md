@@ -8,8 +8,8 @@ By default, these scripts will build a database of campsites in the UK.
 
 ## Prerequisites
 
-* The scripts included here assume presence of `bash`, [Homebrew](https://brew.sh/), and [Docker](https://www.docker.com/products/docker-desktop/) on Mac OS.
-* `import-data.sh` uses `brew` to install [osm2pgsql](https://osm2pgsql.org/)
+- The scripts included here assume presence of `bash`, [Homebrew](https://brew.sh/), and [Docker](https://www.docker.com/products/docker-desktop/) on Mac OS.
+- `import-data.sh` uses `brew` to install [osm2pgsql](https://osm2pgsql.org/)
 
 ## Scripts
 
@@ -35,10 +35,10 @@ Follow these steps to build a world server that contains details of all campsite
 
 Please submit additional data to help establish some import expectations...
 
-| data file                             | options                         | system               | import time |
-| ------------------------------------- | ------------------------------- | -------------------- | ----------- |
-| `--data great-britain-latest.osm.pbf` | `--all`                         | Macbook Pro M1, 2020 | `1:00:51`   |
-| `--data great-britain-latest.osm.pbf` | `--script import-campsites.lua` | Macbook Pro M1, 2020 | `0:00:39`   |
+| data file                             | options                                 | system               | import time |
+| ------------------------------------- | --------------------------------------- | -------------------- | ----------- |
+| `--data great-britain-latest.osm.pbf` | `--all`                                 | Macbook Pro M1, 2020 | `1:00:51`   |
+| `--data great-britain-latest.osm.pbf` | `--script scripts/import-campsites.lua` | Macbook Pro M1, 2020 | `0:00:39`   |
 
 ## Customisation
 
