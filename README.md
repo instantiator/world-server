@@ -2,7 +2,17 @@
 
 Tools and scripts to host your own postgis database and tile server using [OpenStreetMap](https://www.openstreetmap.org/) data.
 
-By default, these scripts will build a database of campsites in the UK.
+This repository contains:
+
+* A docker compose application featuring:
+  * [PostGIS](https://postgis.net/) - a postgres database with geographical capabilities
+  * [pg_tileserv](https://github.com/CrunchyData/pg_tileserv) - a tile server with a simple map interface
+* A number of scripts to:
+  * fetch data from [OSM](https://www.openstreetmap.org/),
+  * import data into the PostGIS database, and
+  * run the tile server
+
+_NB. By default, the scripts in this repository will build a database of campsites in the UK._
 
 ![A screenshot of a browser, showing a map of the UK with blue highlights indicating all the known campsites](screenshots/public.campsites_all.png "A screenshot of a browser, showing a map of the UK with blue highlights indicating all the known campsites")
 
